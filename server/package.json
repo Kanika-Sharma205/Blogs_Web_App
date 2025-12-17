@@ -1,0 +1,36 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "description": "Backend for the blog application",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server",
+    "dev": "nodemon src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "blog-web-app": "file:..",
+    "canvas": "^3.2.0",
+    "connect-mongo": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.2",
+    "googleapis": "^152.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3",
+    "mongoose-aggregate-paginate-v2": "^1.1.4",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.5",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "rate-limiter-flexible": "^7.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "appId": "com.justforfun.app",
+  "appName": "Blog Web App",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    },
+    "CapacitorCookies": {
+      "enabled": true
+    },
+    "Share": {
+      "enabled": true
+    },
+    "Filesystem": {
+      "enabled": true
+    },
+    "App": {
+      "enabled": true
+    }
+  }
+}
