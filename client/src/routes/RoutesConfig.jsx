@@ -37,7 +37,8 @@ const LandingPage = lazy(() => import('../pages/LandingPage'));
 const ExplorePage = lazy(() => import('../pages/ExplorePage'));
 const UserDetail = lazy(() => import('../pages/UserDetail'));
 const BlogDetail = lazy(() => import('../pages/BlogDetail'));
-const AuthPage = lazy(() => import('../pages/AuthPage'));
+const SlidingAuthPage = lazy(() => import('../pages/SlidingAuthPage'));
+
 const VerifySignupPage = lazy(() => import('../pages/VerifySignupPage'));
 const ForgotPasswordPage = lazy(() => import('../pages/ForgotPasswordPage'));
 const VerifyOTPPage = lazy(() => import('../pages/VerifyOTPPage'));
@@ -78,7 +79,7 @@ const routes = createRoutesFromElements(
         path="login"
         element={
           <SuspenseWrapper>
-            <AuthPage />
+            <SlidingAuthPage />
           </SuspenseWrapper>
         }
       />
@@ -86,7 +87,7 @@ const routes = createRoutesFromElements(
         path="signup"
         element={
           <SuspenseWrapper>
-            <AuthPage />
+            <SlidingAuthPage />
           </SuspenseWrapper>
         }
       />
