@@ -1,4 +1,4 @@
-const PING_URL = 'https://blog-web-app-ngmh.onrender.com/api/health';
+const PING_URL = 'https://blogs-web-app-3hdb.onrender.com//api/health';
 const PING_INTERVAL = 14 * 60 * 1000; // 14 minutes
 
 class ExternalKeepAlive {
@@ -32,7 +32,7 @@ class ExternalKeepAlive {
     } catch (error) {
       this.consecutiveFailures++;
       console.error(`❌ Ping failed (${this.consecutiveFailures}/${this.maxFailures}):`, error.message);
-      
+
       if (this.consecutiveFailures >= this.maxFailures) {
         console.error('🚨 Max consecutive failures reached. Stopping keep-alive service.');
         this.stop();
@@ -49,11 +49,11 @@ class ExternalKeepAlive {
 
     console.log(`🚀 Starting keep-alive service for ${this.url}`);
     console.log(`📅 Ping interval: ${PING_INTERVAL / 60000} minutes`);
-    
+
     this.isRunning = true;
-    
+
     this.ping();
-    
+
     this.intervalId = setInterval(() => {
       if (this.isRunning) {
         this.ping();
@@ -82,7 +82,7 @@ class ExternalKeepAlive {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const keepAlive = new ExternalKeepAlive();
-  
+
   process.on('SIGINT', () => {
     console.log('\n🔄 Gracefully shutting down...');
     keepAlive.stop();
